@@ -1,3 +1,6 @@
+import os
+if not os.path.exists("Data"):
+    os.makedirs("Data")
 import streamlit as st
 import pandas as pd
 import numpy as np
