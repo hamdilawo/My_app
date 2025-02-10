@@ -397,12 +397,3 @@ st.header("Évaluation de l'Application")
 st.markdown("""
 ***Lien:*** [Evaluation](https://ee.kobotoolbox.org/i/htBTb6Dx)
 """)
-# with st.form("evaluation_form"):
-#     st.write("Veuillez remplir ce formulaire pour évaluer l'application.")
-#     nom = st.text_input("Nom")
-#     email = st.text_input("Email")
-#     evaluation = st.slider("Évaluation", 1, 5)
-#     commentaire = st.text_area("Commentaire")
-#     soumis = st.form_submit_button("Soumettre")
-#     if soumis:
-#         st.write("Merci pour votre évaluation!")
