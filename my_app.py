@@ -12,15 +12,15 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-image = Image.open('Data/logo.jpg')
+# image = Image.open('Data/logo.jpg')
 
-col1, col2 = st.columns([0.5,0.9])
-with col1:
-   st.image(image,width=100)
-col3, col4, col5 =st.columns([0.5,0.1,0.1])
-with col3:
-    box_date = str(datetime.datetime.now().strftime("%d %B %Y"))
-st.write(f"Dernier mis à jour: \n {box_date}")
+# col1, col2 = st.columns([0.5,0.9])
+# with col1:
+#    st.image(image,width=100)
+# col3, col4, col5 =st.columns([0.5,0.1,0.1])
+# with col3:
+#     box_date = str(datetime.datetime.now().strftime("%d %B %Y"))
+# st.write(f"Dernier mis à jour: \n {box_date}")
 
 st.markdown("""
     <style>
