@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-image = Image.open('logo.jpg')
+image = Image.open('Data/logo.jpg')
 
 col1, col2 = st.columns([0.5,0.9])
 with col1:
