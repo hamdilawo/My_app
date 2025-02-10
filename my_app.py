@@ -12,15 +12,15 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-# image = Image.open('Data/logo.jpg')
+image = Image.open('data/logo.jpg')
 
-# col1, col2 = st.columns([0.5,0.9])
-# with col1:
-#    st.image(image,width=100)
-# col3, col4, col5 =st.columns([0.5,0.1,0.1])
-# with col3:
-#     box_date = str(datetime.datetime.now().strftime("%d %B %Y"))
-# st.write(f"Dernier mis à jour: \n {box_date}")
+col1, col2 = st.columns([0.5,0.9])
+with col1:
+   st.image(image,width=100)
+col3, col4, col5 =st.columns([0.5,0.1,0.1])
+with col3:
+    box_date = str(datetime.datetime.now().strftime("%d %B %Y"))
+st.write(f"Dernier mis à jour: \n {box_date}")
 
 st.markdown("""
     <style>
@@ -133,7 +133,7 @@ if st.button("Télécharger"):
 
             DF = pd.DataFrame(data)
             df = pd.concat([df, DF], axis = 0).reset_index(drop=True)
-            df.to_csv('Data/voitures.csv', index=False)
+            df.to_csv('data/voitures.csv', index=False)
             
     elif url == url2:
         
@@ -212,7 +212,7 @@ if st.button("Télécharger"):
 
             DF = pd.DataFrame(data)
             df = pd.concat([df, DF], axis = 0).reset_index(drop=True)
-            df.to_csv('Data/motos_scooters.csv', index=False)
+            df.to_csv('data/motos_scooters.csv', index=False)
     
     elif url == url3:
         
@@ -289,7 +289,7 @@ if st.button("Télécharger"):
 
             DF = pd.DataFrame(data)
             df = pd.concat([df, DF], axis = 0).reset_index(drop=True)
-            df.to_csv('Data/equipements_pieces.csv', index=False)
+            df.to_csv('data/equipements_pieces.csv', index=False)
     st.write("Données scrapées avec succès!")
 elif url not in [url1, url2, url3]:
     st.write("URL non reconnue. Veuillez entrer une URL valide.")              
@@ -319,15 +319,15 @@ st.markdown('''<style> .stButton>button {
 
           
 # Charger les données 
-load_(pd.read_csv('Data/Scrapping_voitures_with_WS.csv'), 'Données Voitures', '1')
-load_(pd.read_csv('Data/scrapping_motos_with_WS.csv'), 'Données Motos-Scooters', '2')
-load_(pd.read_csv('Data/scrapping_pieces_with_WS.csv'), 'Données Equipements-pièces', '3')
+load_(pd.read_csv('data/Scrapping_voitures_with_WS.csv'), 'Données Voitures', '1')
+load_(pd.read_csv('data/scrapping_motos_with_WS.csv'), 'Données Motos-Scooters', '2')
+load_(pd.read_csv('data/scrapping_pieces_with_WS.csv'), 'Données Equipements-pièces', '3')
 
 
 
 # Section pour visualiser un dashboard
 st.header("Dashboard d'analyse des véhicules")
-data = pd.read_csv("Data/voitures_net.csv")
+data = pd.read_csv("data/voitures_net.csv")
 data = data[data["Prix"] > 1000]  # Filtrer les prix aberrants
 #st.set_page_config(page_title="Analyse de voitures", layout="wide")
 # Filtres
